@@ -1,0 +1,2 @@
+rootProject.name = "Valute converter"
+include ':app'

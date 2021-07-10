@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/calculator_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/converter_header_text"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/left_editText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="@string/default_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculator_header" />
+
+    <EditText
+        android:id="@+id/right_editText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="@string/default_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculator_header" />
+
+    <ImageView
+        android:id="@+id/image_arrow"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_left_and_right_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/left_editText" />
+
+    <TextView
+        android:id="@+id/left_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_none"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/left_editText"
+        app:layout_constraintStart_toStartOf="@id/left_editText"
+        app:layout_constraintTop_toBottomOf="@id/image_arrow"
+        tools:text="RUB" />
+
+    <TextView
+        android:id="@+id/right_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_none"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/right_editText"
+        app:layout_constraintStart_toStartOf="@id/right_editText"
+        app:layout_constraintTop_toBottomOf="@id/image_arrow"
+        tools:text="EUR" />
+
+    <TextView
+        android:id="@+id/change_left_valute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/change_valute"
+        android:textAlignment="center"
+        android:textColor="@color/blue_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/left_currency"
+        app:layout_constraintStart_toStartOf="@id/left_currency"
+        app:layout_constraintTop_toBottomOf="@id/left_currency"
+        tools:text="Изменить \nвалюту" />
+
+    <TextView
+        android:id="@+id/change_right_valute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/change_valute"
+        android:textAlignment="center"
+        android:textColor="@color/blue_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/right_currency"
+        app:layout_constraintStart_toStartOf="@id/right_currency"
+        app:layout_constraintTop_toBottomOf="@id/right_currency"
+        tools:text="Изменить \nвалюту" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Valute converter</string>
+    <string name="converter_header_text">Конвертер валют</string>
+    <string name="choose_header_text">Выбор валют</string>
+    <string name="cancel">Отмена</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_none">-</string>
+    <string name="default_zero">0</string>
+    <string name="change_valute">Изменить \nвалюту</string>
+</resources>

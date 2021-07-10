@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/calculatorFragment">
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.a4nt0n64r.valuteconverter.screens.calculator.CalculatorFragment"
+        android:label="CalculatorFragment" >
+        <action
+            android:id="@+id/action_calculatorFragment_to_selectValuteFragment"
+            app:destination="@id/selectValuteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.a4nt0n64r.valuteconverter.screens.loading.LoadingFragment"
+        android:label="LoadingFragment" >
+        <action
+            android:id="@+id/action_loadingFragment_to_selectValuteFragment"
+            app:destination="@id/selectValuteFragment"
+            app:popUpTo="@id/calculatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectValuteFragment"
+        android:name="com.a4nt0n64r.valuteconverter.screens.select.SelectValuteFragment"
+        android:label="SelectValuteFragment" >
+        <action
+            android:id="@+id/action_selectValuteFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment" />
+        <action
+            android:id="@+id/action_selectValuteFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment"
+            app:popUpTo="@id/navigation_graph" />
+    </fragment>
+</navigation>
